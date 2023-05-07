@@ -1,0 +1,4 @@
+res://default_bus_layout.tres
+res://main.tscn
+res://script/main.gd
+res://assets/shader/outline.tres

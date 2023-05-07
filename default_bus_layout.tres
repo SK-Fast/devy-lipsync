@@ -1,0 +1,29 @@
+[gd_resource type="AudioBusLayout" load_steps=5 format=3 uid="uid://siwadogf7llm"]
+
+[sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_28fdo"]
+resource_name = "SpectrumAnalyzer"
+
+[sub_resource type="AudioEffectRecord" id="AudioEffectRecord_edkfg"]
+resource_name = "Record"
+
+[sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_rlorg"]
+resource_name = "SpectrumAnalyzer"
+
+[sub_resource type="AudioEffectPanner" id="AudioEffectPanner_p6pp7"]
+resource_name = "Panner"
+
+[resource]
+bus/0/effect/0/effect = SubResource("AudioEffectSpectrumAnalyzer_28fdo")
+bus/0/effect/0/enabled = true
+bus/1/name = &"Record"
+bus/1/solo = false
+bus/1/mute = true
+bus/1/bypass_fx = false
+bus/1/volume_db = 6.02
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectRecord_edkfg")
+bus/1/effect/0/enabled = true
+bus/1/effect/1/effect = SubResource("AudioEffectSpectrumAnalyzer_rlorg")
+bus/1/effect/1/enabled = true
+bus/1/effect/2/effect = SubResource("AudioEffectPanner_p6pp7")
+bus/1/effect/2/enabled = true
